@@ -9,21 +9,35 @@
         }
     },
     "bin": "PopBlock.exe",
+    "shortcuts": [
+        [
+            "PopBlock.exe",
+            "Huorong/PopBlock"
+        ]
+    ],
+    "homepage": "https://static.notexists.top/scoop-bucket/huorong-pop-block/version.txt",
+    "license": "Unknown",
     "post_install": [
         "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+
         "Write-Host \"Copying database $dir\\data to $env:LOCALAPPDATA\\huorong-pop-block\"",
         "Copy-Item -Recurse -Force \"$dir\\data\" -Destination \"$env:LOCALAPPDATA\\huorong-pop-block\"",
+
         "Write-Host \"reg add HKLM\\SOFTWARE\\Huorong\\Sysdiag\\app.DataPath to $env:LOCALAPPDATA\\huorong-pop-block\"",
         "reg add HKLM\\SOFTWARE\\Huorong\\Sysdiag\\app /f /v DataPath /t reg_sz /d \"$env:LOCALAPPDATA\\huorong-pop-block\""
     ],
     "post_uninstall": [
         "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+
         "Write-Host \"Stopping PopBlock\"",
         "taskkill /f /im PopBlock.exe",
+
         "Write-Host \"Removing $env:LOCALAPPDATA\\huorong-pop-block\"",
         "Remove-Item \"$env:LOCALAPPDATA\\huorong-pop-block\" -Recurse -Force -ErrorAction SilentlyContinue",
+
         "Write-Host \"Removing registry key\"",
         "reg delete HKLM\\SOFTWARE\\Huorong\\Sysdiag\\app /f /v DataPath",
+
         "Write-Host \"Removing scheduled task\"",
         "schtasks /delete /TN \"Huorong PopBlock\" /f"
     ],

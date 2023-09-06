@@ -1,0 +1,36 @@
+{
+    "version": "2022.2.4-222.4459.9",
+    "description": "Rider. Fast, powerful and cross-platform .NET IDE by JetBrains.",
+    "notes": "Fallback",
+    "homepage": "https://www.jetbrains.com/shop/download/RD/2022200",
+    "license": {
+      "identifier": "Proprietary",
+      "url": "https://www.jetbrains.com/store/license.html"
+    },
+    "architecture": {
+      "64bit": {
+          "url": "https://download-cdn.jetbrains.com/rider/JetBrains.Rider-2022.2.4.exe#/cosi.7z",
+          "hash": "d1bd24a5c3f6ee0b72b9c88045356a6cf56498134919c2ec5d222efd7521a65f"
+      }
+    },
+    "extract_to": "IDE",
+    "bin": [
+      "IDE\\bin\\rider64.exe",
+      [
+        "IDE\\bin\\rider64.exe",
+        "rider"
+      ]
+    ],
+    "shortcuts": [
+      [
+        "IDE\\bin\\rider64.exe",
+        "JetBrains\\Rider"
+      ]
+    ],
+    "persist": "IDE\\bin\\idea.properties",
+    "checkver": {
+      "url": "https://www.jetbrains.com/shop/download/RD/2022200",
+      "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
+      "replace": "${ver}-${build}"
+    }
+  }

@@ -4,7 +4,7 @@
     "notes": "Unofficial",
     "architecture": {
         "64bit": {
-            "url": "http://static.notexists.top/scoop-bucket/huorong-pop-block/5.0.44.8.zip",
+            "url": "https://static.notexists.top/scoop-bucket/huorong-pop-block/5.0.44.8.zip",
             "hash": "74018070351e1e901c7e3bf6f16cb1dd872a57f66f72f791bd3f4d1d70777996"
         }
     },
@@ -28,16 +28,16 @@
         "schtasks /delete /TN \"Huorong PopBlock\" /f"
     ],
     "checkver": {
-        "url": "http://static.notexists.top/scoop-bucket/huorong-pop-block/version.txt"
+        "url": "https://static.notexists.top/scoop-bucket/huorong-pop-block/version.txt"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://static.notexists.top/scoop-bucket/huorong-pop-block/$version.zip"
+                "url": "https://static.notexists.top/scoop-bucket/huorong-pop-block/$version.zip"
             }
         },
         "hash": {
-            "url": "http://static.notexists.top/scoop-bucket/huorong-pop-block/$version.zip.sha256.txt"
+            "url": "https://static.notexists.top/scoop-bucket/huorong-pop-block/$version.zip.sha256.txt"
         }
     }
 }

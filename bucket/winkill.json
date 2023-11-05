@@ -1,0 +1,39 @@
+{
+    "version": "0.3",
+    "description": "Windows Key Killer",
+    "notes": "",
+    "homepage": "https://github.com/clangen/winkill",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/clangen/winkill/blob/master/README.md"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/clangen/winkill/releases/download/0.3/winkill_0.3.zip#/cosi.7z",
+            "hash": "3621a1281d66a698e63e5b4774556b669ed57f218cce738e7e120fd4b548541d"
+        }
+    },
+    "extract_to": "winkill",
+    "bin": [
+        "winkill\\WinKill.exe",
+        [
+            "winkill\\WinKill.exe",
+            "Win Kill"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "winkill\\WinKill.exe",
+            "WinKill"
+        ]
+    ],
+    "persist": "",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/clangen/winkill/releases/download/$version/winkill_$version.zip"
+            }
+        }
+    }
+}
